@@ -1,0 +1,20 @@
+.paglist{
+   	position: absolute;
+    right: 328px;
+    text-align: right;
+   	}
+#Modal{
+   	position: fixed;
+	top: 150px;
+	left: 20%;
+   	}
+.modalDialog {
+	width: 450px;
+	}
+.modalFoot {
+	border-top: 0;
+	text-align: center;
+	}
+.modalFoot button{
+	width: 80px;
+	}

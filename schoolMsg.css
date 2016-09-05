@@ -1,0 +1,76 @@
+.AddMsg {
+	background:#ef8842;
+	border:0;
+	color:#fff;
+}
+.btnGroup button.AddMsg:hover {
+	background:#d86712;
+}
+.formGroup {
+	margin-bottom:40px;
+}
+.btnGroup {
+	margin-bottom:20px;
+}
+table tr {
+	border-left:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+}
+table thead tr th{
+	font-weight: normal;
+}
+#tbody tr td{
+	cursor: pointer;
+	text-indent: 40px;
+	text-align: left;
+}
+#Modal {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    overflow-y: auto;
+    }
+.modalDialog {
+    width: 450px;
+}
+.modal-header{
+	text-align: left;
+	border-bottom: none;
+}
+.formBody{
+	margin-top: 15px;
+}
+.modalTitle {
+    font-size: 12px;
+}
+.labelRight {
+    text-align: right;
+    font-weight: 400;
+    line-height: 25px;
+}
+.botm {
+    margin-bottom: 10px;
+}  
+.modalFoot button {
+    width: 80px;
+}
+.Cancel {
+    background: #b5b5b5;
+    border: 0;
+    color: #fff;
+}
+.Submit {
+    background: #62aae9;
+    border: 0;
+}
+.modalFoot{
+	text-align: center;
+}
+
+.checkbox-inline{
+    float: left;    		
+    }
+.dropdown-toggle {
+	border-radius: 5px;
+	}
+

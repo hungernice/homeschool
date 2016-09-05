@@ -1,0 +1,62 @@
+/*出勤*/
+.attend{
+	text-align: left;
+	text-indent: 30px;
+}
+#Modal{
+	position: fixed;
+	top: 150px;
+	left: 20%;
+}
+.text {
+	height:35px;
+}
+.btm {
+	width:90px;
+	background:#62aae9;
+	border:0;
+}
+.butm {
+	margin-left:30px;
+	background:#62aae9;
+	border:0;
+}
+#paglist{
+    position: absolute;
+    right: 329px;
+    text-align: right;
+}
+#pagnat{
+	margin-top: 0;
+}
+.active {
+	background:#ddd;
+}
+.table-condensed tr td,.table-condensed tr th,.table-condensed tfoot {
+	cursor:pointer;
+}
+.table-condensed tr td:hover {
+	background:#ccc;
+}
+.btun {
+	padding:5px 40px;
+	background:#62aae9;
+	border:0;
+}
+.msgbox {
+	padding:30px 0 20px 0;
+}
+.modfoot {
+	border-top:0;
+}
+/*退出提示框*/
+.modalDialog {
+	width: 450px;
+	}
+.modalFoot {
+	border-top: 0;
+	text-align: center;
+}
+.modalFoot button{
+	width: 80px;
+} 

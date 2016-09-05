@@ -1,0 +1,26 @@
+.mod label{
+	font-size: 15px;
+	font-weight: 400;
+}
+.btum{ 
+	width: 90px;
+	margin-left: 50px; 
+	background: #ef8842; 
+	color: #fff;
+	border: 0;
+	}
+button.btum:hover{
+	background: #d86712;
+}
+/*退出登录*/
+.modalDialog {
+	width: 450px;
+	}
+.modalFoot {
+	border-top: 0;
+	text-align: center;
+	}
+.modalFoot button{
+	width: 80px;
+	}
+

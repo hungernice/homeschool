@@ -1,0 +1,301 @@
+* {
+	font-family:"微软雅黑";
+	margin:0;
+	padding:0;
+}
+body {
+	background:#eee;
+}
+a{
+	cursor: pointer;
+}
+#pagnat {
+    margin-top: 0;
+}
+/*淡出框*/
+.col-sm-9 {
+	position:relative;
+}
+.tps {
+    width: 290px;
+    height: 50px;
+    position: absolute;
+    top: 100px;
+    left: 26%;
+    line-height: 20px;
+    text-align: center;
+    display: none;
+}
+.tpsCont{
+	width:350px;
+	height:50px;
+	position:absolute;
+	top:90px;
+	left:25%;
+	line-height:20px;
+	text-align:center;
+	display:none;
+}
+/*淡出框*/
+.modal-content {
+	position:relative;
+}
+.msg,.msag {
+	height: 40px;
+	display: none;
+	position: absolute;
+	top: 3px;
+	right: 55px;
+	line-height: 5px;
+	
+}
+ul.nav li a {
+	color:#272727;
+}
+ul.nav li.activ a {
+	color:#fff;
+}
+.rightCont dl dd a {
+	color:#272727;
+}
+.btn {
+	border-radius:0;
+}
+.btm:hover {
+	background:#d86712;
+}
+.btn.focus,.btn:focus,.btn:hover {
+	color:#fff;
+	text-decoration:none;
+}
+.navbar {
+	margin-bottom:0;
+	background:#fff;
+}
+.navbar-header {
+	width:150px;
+	height:70px;
+	background: url(../img/logo.jpg)no-repeat center;
+	background-size: 100%;	
+}
+ul.navlist li a {
+	color:#222;
+}
+.container-fluid {
+	width:1200px;
+	background:#fff;
+	margin:0 auto;
+	position:relative;
+}
+#select,#logout {
+	/*反选手型样式*/
+	cursor:pointer;
+}
+.content {
+	width:1200px;
+	margin-top:30px;
+	background:#fff;
+	position:relative;
+}
+.rightCont {
+	width:250px;
+	position:absolute;
+	right:0px;
+	top:15px;
+}
+.rightPic {
+	width:40px;
+	height:40px;
+	float:left;
+	background:url(../img/headpic.png) no-repeat center;
+	display:none;
+}
+.rightCont dl {
+	float:right;	
+}
+.rightCont dl dt {
+	width:55px;
+	font-size:10px;
+	display:block;
+	background:#fac066;
+	color:#fff;
+}
+.rightCont dl dt {
+	text-indent:10px;
+	display:none;
+}
+.rightCont dl dd {	
+	line-height:65px;
+}
+.col {
+	width:210px;
+	height:760px;
+	float:left;
+	border:1px solid #eee;
+	border-top:0;
+}
+.col-lg-9 {
+	padding-left:0;
+	padding-right:0;
+}
+.col-sm-9 {
+	width:990px;
+	float:left;
+	padding-left:0;
+	padding-right:0;
+}
+}.col-sm-3 {
+	padding-left:0;
+	padding-right:0;
+	border-right:1px solid #f3f3f3;
+}
+.spanlist {
+	padding:10px;
+}
+.manage {
+	color:#8d8d8d;
+	font-size:16px;
+	display:block;
+	font-weight:bold;
+	line-height:50px;
+}
+.tableTh {
+	text-align:left;
+	text-indent:40px;
+	font-weight:400;
+}
+.table-bordered tr th a {
+	margin-right:25px;
+}
+.table-bordered tr td a {
+	cursor:pointer;
+	margin-right:10px;
+}
+.table-bordered tr td input {
+	margin-right:25px;
+}
+#tableBody tr td {
+	text-align:left;
+}
+#tableBody tr td:nth-last-child(1) {
+	text-align:right;
+}
+/*#tableBody tr td:nth-child(2) {
+	text-indent:40px;
+}*/
+.text {
+	text-indent:40px;
+}
+.table tbody tr td:nth-last-child(1) {
+	text-align:right;
+}
+.table-bordered thead tr th {
+	border:0;
+}
+.table-bordered tbody tr th {
+	border:0;
+}
+.table-bordered tbody tr {
+	border-bottom:1px solid #ddd;
+}
+.table-bordered tbody tr td {
+	border:0;
+	max-width:100px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+.list {
+	border-top:1px solid #ddd;
+}
+.contHead {
+	margin-top:15px;
+}
+.contHead p {
+	padding-left:30px;
+	line-height:25px;
+}
+.contHead h2 {
+	font-weight:400;
+	font-size:16px;
+	padding-left:30px;
+}
+.smicon {
+	width:20px;
+	margin-left:45px;
+	margin-top: -5px;
+}
+.activ {
+	background:#ef8842;
+	text-align:center;
+}
+ul.nav-stacked li {
+	height:30px;
+	line-height:10px;
+	text-align:center;
+}
+.activ a {
+	color:#fff;
+}
+.cont-head {
+	margin-top:15px;
+	padding-left:20px;
+}
+.cont-head p {
+	line-height:25px;
+}
+.bttom {
+	display:block;
+	height:2px;
+	background:url(../img/bottom10.png) no-repeat;
+	background-size:100%;
+}
+.text-right {
+	margin:20px 0 20px 0;
+}
+.queryCont {
+	margin:0px 0 0px 310px;
+	width:335px;
+}
+table tr th {
+	text-align:center;
+	background:#f4f5f9;
+}
+
+/*模态框*/
+.modal {
+	position:fixed;
+	top:150px;
+}
+.btm {
+	width:90px;
+	background:#ef8842;
+	color:#fff;
+	border:0;
+}
+.btun {
+	padding:5px 40px;
+	background:#62aae9;
+	border:0;
+}
+.msgbox {
+	padding:30px 0 20px 0;
+}
+.modfoot {
+	border-top:0;
+}
+.textRight {
+	margin:30px 0 20px 280px;
+}
+
+/*退出成功*/
+.OutSucess{
+	text-align: center;
+	margin-top: 30px;
+}
+.scrollText {
+    position: relative;
+    padding: 20px 20px 20px 40px;
+    height: 140px;
+    overflow-y: scroll;
+}

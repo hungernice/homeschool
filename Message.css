@@ -1,0 +1,181 @@
+.addMess {
+	background:#ef8842;
+	color:#fff;
+	border:0;
+}
+.btnDel {
+	width:90px;
+	background:#e5394a;
+	color:#fff;
+	margin-left:10px;
+	border:0;
+}
+#DeleteModal{
+	left: 21%;
+}
+.msgID{
+	display: none;
+}
+button.addMess:hover {
+	background:#d86712;
+}
+button.btnDel:hover {
+	background:#da2536;
+}
+table {
+	border:1px solid #ddd;
+}
+table tr th:nth-last-child(1),table tr td:nth-last-child(1) {
+	color:#62aae9;
+}
+.btom {
+	width:90px;
+	background: #62aae9;
+	color:#fff;
+	border:0;
+}
+.table tr td {
+	cursor:pointer;
+}
+.paglist {
+	text-align:right;
+}
+.paglist ul {
+	margin-top:0;
+}
+/*模态框样式*/
+#DelModal {
+	position:fixed;
+	top:150px;
+	left:21%;
+}
+#Modal {
+	position:fixed;
+	top:150px;
+	left:0;
+}
+.modalDialog {
+	width:450px;
+}
+.modalTitle {
+	font-size:12px;
+}
+.labelRight {
+	text-align:right;
+	font-weight:400;
+	line-height:25px;
+}
+.botm {
+	margin-bottom:10px;
+}
+.modalFoot,.modfoot {
+	border-top:0;
+	text-align:center;
+}
+.Cancel {
+	background:#b5b5b5;
+	border:0;
+	color:#fff;
+}
+.Submit {
+	background:#62aae9;
+	border:0;
+}
+.modalFoot button {
+	width:80px;
+}
+.modalHeader {
+	padding:10px 0 10px 20px;
+}
+.modalHeader h4 {
+	font-size:15px;
+}
+.modalBody {
+	height:30px;
+	padding:0;
+	border-bottom:1px solid #eee;
+}
+.modalBody ul {
+	height:100%;
+}
+.modalBody ul li {
+	width:50%;
+	height:100%;
+	float:left;
+	list-style:none;
+	text-align:center;
+	line-height:28px;
+	cursor:pointer;
+}
+.modalBody ul li span {
+	width:12px;
+	height:10px;
+	font-size:12px;
+	background:#4a9ce6;
+	display:inblock;
+	color:#fff;
+	padding:0px 7px;
+	margin-left:5px;
+}
+.contTxt {
+	padding: 14px 0px 14px 50px;
+	max-height: 160px;
+    min-height: 160px;
+    overflow-y: scroll;
+}
+.table-bordered tr td a.seek{
+	margin-right: 0;
+}
+.headerLi {
+	background:#eee;
+}
+.modfoot {
+	border-top:0;
+	padding:0 15px 15px;
+}
+.btm {
+	padding:5px 40px;
+	background:#62aae9;
+	border:0;
+}
+.container img {
+	width:75%;
+}
+.contnet {
+	margin:5% 35%;
+}
+.butn {
+	padding:5px 40px;
+	background:#62aae9;
+	border:0;
+}
+.pagra {
+	text-align:right;
+}
+.pagra ul {
+	margin-top:0;
+}
+.timeCont,.placeCont,.courseCont {
+	display:none;
+}
+.colPad {
+	padding:0;
+}
+.pdLeft {
+	width: 33%;
+	display: inline-block;
+	line-height: 20px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+/*退出登录框*/
+.modalDialog {
+	width: 450px;
+	}
+.modalFoot {
+	border-top: 0;
+	text-align: center;
+	}
+.modalFoot button{
+	width: 80px;
+}

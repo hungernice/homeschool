@@ -1,0 +1,186 @@
+.searchBtn {
+	width:90px;
+	background:#ef8842;
+	color:#fff;
+	border:0;
+}
+button.searchBtn:hover {
+	background:#d86712;
+}
+.headName{
+	background:#ececec;
+}
+#Modal {
+	position:fixed;
+	top:150px;
+	left: 21%;
+}
+.countNum ul li {
+	float:left;
+}
+.tablecont {
+	border:0;
+	margin-bottom:20px;
+	margin-left:315px;
+}
+.attendance {
+	width:15px;
+	height:15px;
+	float:left;
+	display:inline-block;
+	background:#bfbfbf;
+	margin:3px 5px 0 20px;
+}
+.tableCont{
+	height: 225px;
+	margin-top: 10px;
+    overflow-y: scroll;    
+}
+
+/*日期查询缺勤*/
+.noattend{
+	background: #e30a20;
+	color: #fff;
+}
+.noattend:hover{
+	background: #f51a30;
+}
+/*日期查询已到*/
+.attendStd{
+	background: #bfbfbf;
+	color: #fff;
+}
+.attendStd:hover{
+	background: #d8d4d4;
+}
+.disAttendance {
+	width:15px;
+	height:15px;
+	float:left;
+	display:inline-block;
+	background:#e30a20;
+	margin:3px 5px 0 20px;
+}
+.table-condensed tr td {
+	cursor:pointer;
+}
+.table-condensed tr td:hover,.table-condensed tr th:hover {
+	background:#ccc;
+}
+
+.letter {
+	width:35px;
+	height:35px;
+	line-height:35px;
+	text-align:center;
+	display:inline-block;
+	border:1px solid #565c61;
+	margin:5px 0 0 5px;
+	font-weight:400;
+	font-size:16px;
+	color:#222;
+	cursor:pointer;
+}
+#nameHead label:hover{
+	background: #f9f9f9;
+}
+.attendInfo {
+	width:70px;
+	height:35px;
+	line-height:35px;
+	text-align:center;
+	cursor: pointer;
+	display:inline-block;
+	border:1px solid #565c61;
+	margin:5px 0 0 5px;
+	font-weight:400;
+	font-size:16px;
+	color:#222;
+}
+.letterSearch {
+	color:#ef8842;
+	font-size:16px;
+	line-height:35px;
+	margin-left:10px;
+}
+#Allstudent label {
+	cursor:pointer;
+	width:119px;
+	height:35px;
+	margin:5px 5px 0 5px;
+	line-height:35px;
+	text-align:center;
+	display:inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;	
+	font-weight:500;
+	font-size:16px;
+}
+.name {		/*未到*/	
+	color:#e30a20;	
+}
+.attendName{ /*已到*/
+	color: #ed7418;	
+}
+
+.nulName {
+	width:120px;
+	height:35px;
+	margin:5px 5px 0 5px;
+	line-height:35px;
+	text-align:center;
+	display:inline-block;
+	border:1px solid #565c61;
+	font-weight:500;
+	font-size:16px;
+	color:#222;
+}
+.returnname {
+	width:120px;
+	height:35px;
+	margin:5px 5px 0 5px;
+	line-height:35px;
+	text-align:center;
+	display:inline-block;
+	border:1px solid #565c61;
+	font-weight:500;
+	font-size:16px;
+	color:#222;
+}
+.btun {
+	padding:5px 40px;
+	background:#62aae9;
+	border:0;
+}
+.msgbox {
+	padding:30px 0 20px 0;
+}
+.modfoot {
+	border-top:0;
+}
+.labelBorder {
+	float: left;
+	display: block;
+	width: 99%;
+	border-bottom: 1px solid #ddd;
+	margin-top: 10px;
+}
+.count {
+	width:100%;
+	min-height:100px;
+	margin-top:5px;
+}
+.table thead tr th {
+	font-weight:400;
+}
+/*退出登录框*/
+.modalDialog {
+	width: 450px;
+	}
+.modalFoot {
+	border-top: 0;
+	text-align: center;
+	}
+.modalFoot button{
+	width: 80px;
+	}

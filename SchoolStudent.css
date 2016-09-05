@@ -1,0 +1,171 @@
+.container button.AddStudent:hover {
+	background:#145E9D;
+}
+.container button.outMod:hover{
+	background: #6C9949;
+}
+.container button.inMod:hover{
+	background:#d86712;
+}
+.container button.addMod:hover {
+	background:#6e9f6e;
+}
+.container button.delete:hover {
+	background:#da2536;
+}
+table tr th a,table tr td a {
+	cursor:pointer;
+}
+.table thead tr th {
+	padding: 8px 4px;
+}
+#tableBody tr td {
+	text-indent: 35px;
+}
+table tr {
+	border-left:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+}
+.table tbody tr td,.table tbody tr th {
+	border:0;
+}
+.table tbody tr th:nth-last-child(1) {
+	text-align:right;
+}
+.table tbody tr td:nth-last-child(1) {
+	text-align:right;
+}
+.inMod {
+	background:#ef8842;
+	border:0;
+	color:#fff;
+}
+.outMod {
+	background:#85c255;
+	border:0;
+	color:#fff;
+	margin-left: 10px;
+}
+.AddStudent {
+	background:#62aae9;
+	border:0;
+	color:#fff;
+	margin-left: 10px;
+}
+#fileSubmit {
+	opacity:0;
+	position:absolute;
+	top:0;
+	left:30px;
+	cursor:pointer;
+}
+.delete {
+	background:#e5394a;
+	color:#fff;
+	border:0;
+	margin-left: 10px;
+}
+
+.fileSumit{
+	position: absolute;
+    left: 13px;
+    top: -4px;
+    cursor: pointer;
+    opacity: 0;
+}
+.paglist {
+	text-align:right;
+}
+.labelRight {
+	font-weight:400;
+	text-align:right;
+	line-height:30px;
+}
+.paglist ul {
+	margin-top:0;
+}
+.modalTitle {
+	font-size:12px;
+}
+#Modal {
+	position:fixed;
+	top:150px;
+	left:2%;
+}
+#DelModal,#DeleteModal {
+	position:fixed;
+	top:150px;
+	left: 22%;
+}
+.modalDialog {
+	width:450px;
+}
+.formGroup {
+	margin-bottom:40px;
+}
+.modalFoot,.modfoot {
+	border-top:0;
+	text-align:center;
+}
+.container button {
+	width:90px;
+}
+.modalFoot button {
+	width:80px;
+}
+.modalBody {
+	padding:15px 15px 15px 0px;
+}
+.msgbox {
+	padding:30px 0 20px 0;
+}
+#ModalCont {
+	width:300px;
+	position:fixed;
+	top:150px;
+	left:47%;
+}
+.btun {
+	padding:5px 40px;
+	background:#62aae9;
+	border:0;
+	margin-left:0;
+}
+.container img {
+	width:75%;
+	padding-top: 10px;
+}
+.contnet {
+	margin:5% 35%;
+}
+.butn {
+	padding:5px 40px;
+	background:#62aae9;
+	border:0;
+}
+.modalFoot button {
+	width:80px;
+}
+#addModal {
+	position:fixed;
+	top:150px;
+	left:0;
+}
+.box {
+	width:70%;
+	height:50px;
+	position:relative;
+	border:dashed 1px #ddd;
+	line-height:50px;
+	margin:0 auto;
+	text-align:center;
+}
+.Cancel {
+	background:#b5b5b5;
+	border:0;
+	color:#fff;
+}
+.Submit {
+	background:#62aae9;
+	border:0;
+}
