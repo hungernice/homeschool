@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>  
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>教师</title>
+    <link rel="shortcut icon" href="../img/favicon.ico"/>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/Teacher.css" />
+    <link rel="stylesheet" href="../css/bootstrap-select.min.css" />
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/bootstrap3.0.3.min.js"></script>  
+    <script src="../js/jquery-form.js"></script>
+  </head>
+  <body style="overflow: scroll;">    
+      <div class="navbar navbar-static-top">
+        <div class="container-fluid">
+          <div class="navbar-header"></div>
+          <div class="rightCont">
+            <div class="rightPic"></div>
+            <dl>
+              <dt>已认证</dt>
+              <dd>孩在身边智慧教育
+                <span class="spanlist">|</span>
+                <a id="logout">退出</a>
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div class="cont">
+        <div class="container-fluid content">
+          <div class="row">
+            <div class="col">              
+                <span class="manage">
+                  <img src="../img/ability.png" class="smicon" />&nbsp;&nbsp;管理相关</span>
+                <ul class="nav nav-stacked">
+                  <li><a href="ClassMate.html">班级</a></li>
+                  <li><a href="Course.html">科目</a></li>                    
+                  <li class="activ"><a >教师</a></li>
+                  <li><a href="Student.html">学生</a></li>
+                  <li><a href="Classmaster.html">班主任</a></li>
+                </ul>
+                <span class="manage list">
+                  <img src="../img/checkcard.png" class="smicon" />&nbsp;&nbsp;考勤相关</span>
+                <ul class="nav nav-stacked">
+                  <li>
+                    <a href="ClassMange.html">班级考勤</a></li>
+                  <li>
+                    <a href="SchoolMange.html">学校考勤</a></li>
+                </ul>
+                
+                <span class="manage list">
+                  <img src="../img/other.png" class="smicon" />&nbsp;&nbsp;其他相关</span>
+                <ul class="nav nav-stacked">
+                  <li>
+                     <a href="Message.html">通知发布</a></li>
+                  <li>
+                    <a href="Download.html">模板下载</a></li>
+                </ul>              
+            </div>  <!--左侧导航结束     -->
+            
+            <div class="col-sm-9">
+              <div class="contHead">
+                <h2>教师</h2>
+                <p>教师信息</p>
+                <label class="bttom"></label>
+              </div>
+              <!--提示-->
+              <div class="alert alert-success tps"></div>
+              <div class="col-lg-12">
+                <div class="col-lg-12 text-right btnGroup"> 
+                	<div class="col-md-3">
+              			<input type="text" class="form-control search" placeholder="请输入关键字搜索" />              		
+              		</div>
+                  <button type="button" class="btn inMod " data-toggle="modal" data-target="#addModal">批量导入</button>
+					    		<button type="button" class="btn outMod" id="outputMod">批量导出</button>
+              		<button type="button" class="btn AddTeach" data-toggle="modal" data-target = "#Modal" >教师添加</button>               
+                	<button type="button" class="btn delet" id="deleted">删除</button></div>
+                <div class=" col-lg-12">
+                  <table class="table table-bordered table-hover" id="tableCont" border="0" cellspacing="" cellpadding="">
+                    <thead>
+                      <tr>
+                        <th class="tableTh">班级</th>
+                        <th class="tableTh">科目</th>
+                        <th class="tableTh">姓名</th>
+                        <th class="tableTh">账号</th>
+                        <th class="tableTh">密码</th>
+                        <th class="text-right">
+                          <a id="select">反选</a></th>
+                      </tr>
+                    </thead>
+                    <tbody id="tableBody">  </tbody>
+                  </table>
+                </div>
+                <!--分页-->
+                <div class=" col-lg-12 paglist">
+                  <ul class="pagination" id="pagnat" style="cursor: pointer;"></ul>
+                </div>
+              </div>
+              <!-- 教师添加 -->
+              <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+                <div class="modal-dialog modalDialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title modalTitle" id="ModalLabel">教师添加</h4></div>
+                    <div class="alert alert-success msg"></div>
+                    <div class="modal-body">
+                      <form id="formSubmit" class="form-horizontal">
+                        <div class="form-group col-sm-12">
+                          <label for="classmate" class="col-sm-3 control-label labelRight">班级</label>
+                          <div class="col-sm-8">       								
+                            <select id="selectClass" class="form-control input-sm selectpicker show-tick dropdown" multiple>  
+                            	
+                            </select>
+                            
+                          </div>
+                        </div>
+                        <div class="form-group col-sm-12">
+                          <label for="classmate" class="col-sm-3 control-label labelRight">学科</label>
+                          <div class="col-sm-8">
+                            <select class="form-control input-md" id="selectProject">
+                            	
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group col-sm-12">
+                          <label for="classmate" class="col-sm-3 control-label labelRight">姓名</label>
+                          <div class="col-sm-8">
+                            <input type="text" autofocus="autofocus" class="form-control" id="userName" placeholder="输入姓名" /></div>
+                        </div>
+                        <div class="form-group col-sm-12">
+                          <label for="classmate" class="col-sm-3 control-label labelRight">账号</label>
+                          <div class="col-sm-8">
+                            <input type="tel" class="form-control" id="Getphone" placeholder="输入手机号码" /></div>
+                        </div>
+                        <div class="form-group col-sm-12">
+                          <label for="classmate" class="col-sm-3 control-label labelRight">密码</label>
+                          <div class="col-sm-8">
+                            <input type="password" class="form-control" id="pswd" placeholder="输入密码" /></div>
+                        </div>
+                        <div class="modal-footer modalFoot ">
+                          <button type="button" class="btn btn-default Cancel" data-dismiss="modal">取消</button>
+                          <button type="button" class="btn btn-primary Submit" data-dismiss="modal" id="submit_btn" >提交</button></div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--删除不成立-->
+              <div class="modal fade"  id="DelModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content col-lg-6">
+                    <div class="modal-footer modfoot col-lg-12">
+                      <p class="text-center msgbox">请选择所需删除的项目</p>
+                      <div class="col-lg-12 text-center">
+                        <button type="button" class="btn butn btn-primary" data-dismiss="modal">ok</button></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--确认删除-->
+              <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content col-lg-6">
+                    <div class="container contnet col-lg-4">
+                      <img src="../img/danger.png" /></div>
+                    <div class="modal-footer modalFoot">
+                      <p class="text-center">确认删除</p>
+                      <div class="col-lg-12 text-center">
+                        <button type="button" class="btn btn-default Cancel" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary Submit" data-dismiss="modal" id="sure">提交</button></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 编辑 教师-->
+              <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+                <div class="modal-dialog modalDialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title modalTitle" id="ModalLabel">编辑教师</h4></div>
+                    <!--提示-->
+                    <div class="alert alert-success msg"></div>
+                    <div class="modal-body">
+                      <form id="msg_form" class="form-horizontal">
+                        <div class="form-group container col-sm-12" style="display: none;">
+                          <label class="col-sm-4 control-label labelRight">教师ID</label>
+                          <div class="col-sm-7 ">
+                            <input type="text" class="form-control" id="teacherId" value="" />
+                            <input type="text" class="form-control" id="classids"/>
+                          </div>
+                        </div>
+                        <div class="form-group container col-sm-12">
+                          <label for="classmate" class="col-sm-4 control-label labelRight">班级</label>
+                          <div class="col-sm-7">
+                            <select id="GetClass" class="form-control input-sm selectpicker show-tick dropdown" multiple>
+                              <option value="" selected="selected"></option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group container col-sm-12">
+                          <label for="classmate" class="col-sm-4 control-label labelRight">学科</label>
+                          <div class="col-sm-7">
+                            <select class="form-control input-sm" id="getCourse">
+                              <option value="" selected="selected"></option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group container col-sm-12">
+                          <label for="classmate" class="col-sm-4 control-label labelRight">姓名</label>
+                          <div class="col-sm-7">
+                            <input type="text" autofocus="autofocus" class="form-control" id="teacherName" placeholder="请输入姓名" /></div>
+                        </div>
+                        <div class="form-group container col-sm-12">
+                          <label for="classmate" class="col-sm-4 control-label labelRight">账号</label>
+                          <div class="col-sm-7">
+                            <input type="text" class="form-control" id="user" placeholder="请输入手机号作为账号" /></div>
+                        </div>
+                        <div class="form-group container col-sm-12">
+                          <label class="col-sm-4 control-label labelRight">密码</label>
+                          <div class="col-sm-7">
+                            <input type="password" class="form-control" id="userPswd" placeholder="请输入密码" /></div>
+                        </div>
+                      </form>                     
+                      <div class="modal-footer modalFoot ">
+                        <button type="button" class="btn btn-default Cancel" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary Submit" id="Editsubmit" data-dismiss="modal">提交</button></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+             <!--批量导入学生-->
+            <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog modalDialog">              	
+	                <div class="modal-content">
+	                	<form id="formToUpdate" enctype="multipart/form-data">
+		                  <div class="modal-header">
+		                    <h4 class="modal-title modalTitle" id="myModalLabel">批量导入学生</h4></div>
+		                  <div class="modal-body">
+		                    <div class="box">	                    	
+			                    	<span class="fileName">点击添加模板</span>
+			                      <input name="file" type="file" class="fileSumit" id="fileload" />	                     
+		                    </div>                  
+		                  </div>
+		                  <div class="modal-footer modalFoot ">
+		                    <button type="button" class="btn btn-default Cancel" data-dismiss="modal">取消</button>
+		                    <button type="button" class="btn btn-primary Submit" data-dismiss="modal" id="fileSub" >提交</button>
+		                  </div>
+	                 	</form>
+	                </div>
+                
+              </div>
+            </div>
+            <!--批量提示框-->
+            <div class="modal fade" id="returnMsg" tabindex="-1" role="dialog" aria-labelledby="MsgLabel" aria-hidden="true">
+            	<div class="modal-dialog modalDialog">
+            		<div class="modal-content">
+            			<div class="modal-body" id="EorBody">            				
+            			</div>
+            			<div class="modal-footer modalFoot ">
+		                <button type="button" class="btn btn-default " data-dismiss="modal">取消</button>		                    
+		               </div>
+            		</div>
+            	</div>
+            </div>
+						<!--退出提示框-->
+	          <div class="modal fade" id="PopMsg" tabindex="-1" role="dialog" aria-labelledby="MsgLabel" aria-hidden="true">
+	            <div class="modal-dialog modalDialog">
+	            	<div class="modal-content">
+	            		<div class="modal-body" id="MsgBody"></div>           				
+	            		<div class="modal-footer modalFoot ">
+			              <button type="button" class="btn btn-default" id="logOut" data-dismiss="modal">确定</button>		                    
+			            </div>
+	            	</div>
+	            </div>
+	          </div>                 
+          </div>
+        </div>
+      </div>
+    </div>    
+    <script src="../js/Teacher.js"></script>
+    <script src="../js/logout.js"></script>
+    <script src="../js/bootstrap-paginator.js"></script>    
+    <script src="../js/bootstrap-select.min.js" ></script>
+  </body>
+
+</html>
