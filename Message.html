@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>发布通知</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/Message.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/bootstrap3.0.3.min.js"></script>
+    <script src="../js/Message.js"></script>
+    <script src="../js/bootstrap-paginator.js"></script>
+    <script src="../js/logout.js"></script>
+  </head>
+  
+  <body style="overflow: scroll;">
+    <div class="navbar navbar-static-top">
+      <div class="container-fluid">
+        <div class="navbar-header"></div>
+        <div class="rightCont">
+          <div class="rightPic"></div>
+          <dl>
+            <dt>已认证</dt>
+            <dd>孩在身边智慧教育
+              <span class="spanlist">|</span>
+              <a id="logout">退出</a></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <div class="cont">
+      <div class="container-fluid content">
+        <div class="row">
+          <div class="col">
+            <div>
+              <span class="manage">
+                <img src="../img/ability.png" class="smicon" />&nbsp;&nbsp;考勤相关</span>
+              <ul class="nav nav-stacked">
+                <li>
+                  <a href="ClassMate.html">班级考勤</a></li>
+              </ul>
+            </div>
+            <div>
+              <span class="manage">
+                <img src="../img/commite.png" class="smicon" />&nbsp;&nbsp;发布相关</span>
+              <ul class="nav nav-stacked">
+                <li>
+                  <a href="Homework.html">发布作业</a></li>
+                <li>
+                  <a href="Grade.html">发布成绩</a></li>
+                <li class="activ">
+                  <a href="#">发布通知</a></li>
+              </ul>
+            </div>
+            <div>
+              <span class="manage">
+                <img src="../img/other.png" class="smicon" />&nbsp;&nbsp;其他相关</span>
+              <ul class="nav nav-stacked">
+                <li>
+                  <a href="Contact.html">联系方式</a></li>
+                <li>
+                  <a href="Download.html">模板下载</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-9">
+            <div class="contHead">
+              <h2>发布通知</h2>
+              <p>新建通知内容</p>
+              <label class="bttom"></label>
+            </div>
+            <!--提示-->
+            <div class="alert alert-success tps"></div>
+            <div class="col-lg-12">
+              <div class="container col-lg-12 text-right">
+                <button type="button" class="btn addMess" data-toggle="modal" data-target="#Modal">添加发布通知</button>
+                <button type="button" class="btn btnDel" id="del">删除</button></div>
+              <div class="container col-lg-12">
+                <table class="table table-bordered table-hover" id="tableCont" border="0" cellspacing="" cellpadding="">
+                  <thead>
+                    <tr>
+                      <th class="tableTh">时间</th>
+                      <th class="tableTh">类型</th>
+                      <th class="tableTh">内容</th>
+                      <th class="text-right">
+                        <a id="select">反选</a></th>
+                    </tr>
+                  </thead>
+                  <tbody id="tableBody"></tbody>
+                </table>
+              </div>
+              <!--分页-->
+              <div class="container col-lg-12 paglist">
+                <ul class="pagination" id="pagnat" style="cursor:pointer;"></ul>
+              </div>
+            </div>
+            <!--发布通知确认-->
+            <div class="modal fade" id="Modallist" style="left: 18%;" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content col-lg-7 colPad">
+                  <div class="modal-header modalHeader">
+                    <h4 class="modal-title" id="myModalLabel">通知确认</h4></div>
+                  <div class="modal-body modalBody">
+                    <ul>
+                      <li class="noSure">未确认
+                        <span class="nocomfirm"></span></li>
+                      <li class="headerLi Sure">已确认
+                        <span class="comfirm"></span></li>
+                    </ul>
+                    <div class="container contTxt col-lg-12" id="nosure"><!--未确认-->
+                      
+                    </div>
+                    <div class="container contTxt col-lg-12" id="sure" style="display:none;"><!--确认-->
+                      
+                    </div>
+                  </div>
+                  <div class="modal-footer modfoot col-lg-12">
+                    <div class="col-lg-12 text-center">
+                      <button type="button" class="btn btom btn-primary" data-dismiss="modal">ok</button></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--添加发布通知-->
+            <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog modalDialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title modalTitle" id="myModalLabel">发布通知</h4></div>
+                  <!--提示-->
+                  <div class="alert alert-success msg"></div>
+                  <div class="modal-body">
+                    <form id="formSubmit">
+                      <div class="form-group container col-sm-12">
+                        <label class="col-sm-3 control-label labelRight">类型</label>
+                        <div class="col-sm-8 botm">
+                          <select class="form-control input-sm " id="Selection">
+                          	<option value="0">通知</option>
+                            <option value="1">放假</option>
+                            <option value="2">考试</option>
+                            <option value="3">家长会</option>
+                            <option value="4">开学</option>
+                          </select>
+                        </div>
+                        <label class="col-sm-3 control-label labelRight">发送人</label>
+                        <div class="col-sm-8 botm">
+                          <input type="text" autofocus="autofocus" class="form-control" id="send" placeholder="请输入发送人" /></div>
+                        <div class="courseCont" style="display:none;">
+                          <label class="col-sm-3 control-label labelRight">科目</label>
+                          <div class="col-sm-8 botm">
+                            <input type="text" class="form-control" id="course" placeholder="请输入科目" /></div>
+                        </div>
+                        <div class="timeCont" style="display:none;">
+                          <label class="col-sm-3 control-label labelRight">时间</label>
+                          <div class="col-sm-8 botm">
+                            <input type="text" class="form-control" id="time" placeholder="时间" /></div>
+                        </div>
+                        <div class="placeCont" style="display:none;">
+                          <label class="col-sm-3 control-label labelRight">地点</label>
+                          <div class="col-sm-8 botm">
+                            <input type="text" class="form-control" id="place" placeholder="地点" /></div>
+                        </div>
+                        <label class="col-sm-3 control-label labelRight">内容</label>
+                        <div class="col-sm-8 botm">
+                          <textarea id="txtarea" class="form-control formControl" rows="6"></textarea>
+                        </div>
+                      </div>
+                      <div class="modal-footer modalFoot">
+                        <button type="button" class="btn btn-default Cancel" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary Submit" id="noralMsg" data-dismiss="modal">提交</button>                        
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--确认删除-->
+            <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content col-md-6">
+                  <div class="container contnet col-md-4">
+                    <img src="../img/danger.png" /></div>
+                  <div class="modal-footer modalFoot">
+                    <p class="text-center">确认删除</p>
+                    <div class="col-md-12 text-center">
+                      <button type="button" class="btn btn-default Cancel" data-dismiss="modal">取消</button>
+                      <button type="button" class="btn btn-primary Submit" data-dismiss="modal" id="sureDel">确定</button></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--删除不成立-->
+            <div class="modal fade" id="DelModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content col-md-6">
+                  <div class="container contnet col-md-4">
+                    <img src="../img/danger.png" /></div>
+                  <div class="modal-footer modfoot col-md-12">
+                    <p class="text-center">请选中所需删除的项目</p>
+                    <div class="col-md-12 text-center">
+                      <button type="button" class="butn btn-primary" data-dismiss="modal">ok</button></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+						<!--退出提示框-->
+            <div class="modal fade" id="PopMsg" tabindex="-1" role="dialog" aria-labelledby="MsgLabel" aria-hidden="true">
+            	<div class="modal-dialog modalDialog">
+            		<div class="modal-content">
+            			<div class="modal-body" id="MsgBody">            				
+            			</div>
+            			<div class="modal-footer modalFoot ">
+		                <button type="button" class="btn btn-default" id="logOut" data-dismiss="modal">确定</button>		                    
+		               </div>
+            		</div>
+            	</div>
+            </div>                  
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
